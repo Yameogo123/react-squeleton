@@ -68,5 +68,8 @@ clean-node:
 # Default target: Runs all necessary steps in sequence
 all-install: install-nvm install-node use-node install-packages
 
-
+# to launch the script
+run: 
+	@echo "$(ccso)--> Running the script $(ccend)"
+	npm start
 
