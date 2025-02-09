@@ -1,0 +1,5 @@
+.env
+.env.template
+.github
+.git 
+src
