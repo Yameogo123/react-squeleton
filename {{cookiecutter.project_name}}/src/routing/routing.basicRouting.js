@@ -3,13 +3,13 @@
 import React from "react";
 
 import { Route, Routes } from "react-router-dom";
-import { useSelector } from "react-redux";
+//import { useSelector } from "react-redux";
 import Home from "../views/view.home";
 
 
 export default function BasicRouting() {
 
-    const user = useSelector((state)=> state.userReducer.user);
+    //const user = useSelector((state)=> state.userReducer.user);
 
     return (
         <Routes>

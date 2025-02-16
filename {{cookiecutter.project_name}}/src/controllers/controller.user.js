@@ -1,6 +1,7 @@
 import { toast } from "react-toastify";
-import { Remove, Send, Update, Get } from "../services/service.api";
-import { getCurrentDate, isEmail, isName, isPassword, isPhone } from "./controller.utils";
+//import { Remove, Send, Update, Get } from "../services/service.api";
+import { Send } from "../services/service.api";
+//import { getCurrentDate, isEmail, isName, isPassword, isPhone } from "./controller.utils";
 
 
 

@@ -14,8 +14,8 @@ import { useLocation } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
-import BasicRouting from './routing/hooks.basicRouting';
-import SecurityRouting from './routing/hooks.securityRouting';
+import BasicRouting from './routing/routing.basicRouting';
+import SecurityRouting from './routing/routing.securityRouting';
 
 function App() {
 
