@@ -15,7 +15,7 @@ ccso = $(shell tput smso)
 .PHONY: install-nvm install-node use-node install-packages clean-node
 
 
-# Install NVM if not exists
+# 1- Install NVM if not exists
 install-nvm:
 	@echo "$(ccso)--> 🔍 Checking if NVM is installed... $(ccend)"
 	@if ! command -v nvm &> /dev/null; then \
@@ -28,7 +28,7 @@ install-nvm:
 		echo "$(ccso)--> ✅ NVM is already installed. $(ccend)"; \
 	fi
 
-# Install Node.js & npm using nvm
+# 2- Install Node.js & npm using nvm
 install-node:
 	@echo "$(ccso)--> Installing Node.js $(NODE_VERSION) using nvm... $(ccend)"
 	@if [ -d "$$HOME/.nvm" ]; then \
@@ -37,7 +37,7 @@ install-node:
 		echo "$(ccso)--> ❌ NVM not found. Please install nvm first. $(ccend)"; \
 	fi
 
-# Use the installed Node.js version
+# 3- Use the installed Node.js version
 use-node:
 	@echo "$(ccso)--> Setting Node.js version $(NODE_VERSION)... $(ccend)"
 	@if [ -d "$$HOME/.nvm" ]; then \
@@ -46,7 +46,7 @@ use-node:
 		echo "$(ccso)--> ❌ NVM not found. Please install nvm first. $(ccend)"; \
 	fi
 
-# Install npm packages
+# 4- Install npm packages
 install-packages:
 	@echo "$(ccso)--> Installing npm packages... $(ccend)"
 	@if [ -d "$$HOME/.nvm" ]; then \
@@ -65,8 +65,11 @@ clean-node:
 	fi
 
 
-# Default target: Runs all necessary steps in sequence
+# 1 + 2 + 3 + 4 - Default target: Runs all necessary steps in sequence
 all-install: install-nvm install-node use-node install-packages
 
-
+# to launch the script
+run: 
+	@echo "$(ccso)--> Running the script $(ccend)"
+	npm start
 
